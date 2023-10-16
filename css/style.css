@@ -1,0 +1,81 @@
+/* не знал, как сделать header во всю ширину))) */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+    display: flex;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background: #FFF;
+    box-shadow: 0px 1.13351px 4.29362px 0px rgba(133, 94, 152, 0.03), 0px 2.86674px 10.85888px 0px rgba(133, 94, 152, 0.04), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05);    
+  }
+
+  .header-right {
+    float: right;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .button {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .button.secondary {
+    background-color: white;
+    color: #7953C3;
+    border: 2px solid #7953C3;
+  }
+
+  .button.primary {
+    background-color: #7953C3;
+    color: white;
+  }
+
+  h3 {
+    font-family: Museo Sans Cyrl;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  p {
+  font-family: Museo Sans Cyrl;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  }
+
+  .bruh {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .main-part {
+    display: flex;
+    border: 1px red solid;  
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
