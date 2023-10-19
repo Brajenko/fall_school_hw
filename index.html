@@ -2,33 +2,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <title>Помогите</title>
-    <div class="header">
-        <img src="img/logo.svg">
-        <div class="header-right">
-          <a class="button secondary" href="/exit">Выйти из аккаунта</a>
-        </div>
-      </div>
 </head>
 <body>
-    <div class="main-content">
-      <div class="upper-part">
-        <a class="button secondary" href="/">На главную</a>
-        <div class="bruh">
-          <h3>Создание профиля</h3>
-          <p>/</p>
-          <p>О себе</p>
-          </div>
-      </div>
-      <div class="main-part">
-        <div class="input-foto">
-          <p>Аватар профиля</p>
-          <a class="button primary" href="/loaddsds">Загрузить</a>
-          <p>Загрузите фотографию весом не более 10 мб</p>
+  <div class="header">
+    <img src="src/img/logo.svg">
+    <div class="header-right">
+      <a class="button secondary" href="/exit">Выйти из аккаунта</a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="upper-part">
+      <button class="button secondary">На главную</button>
+      <div class="upper-part__stage">
+        <h3>Создание профиля</h3>
+        <div class="more-info__stage">
+          <b class="grey">/</b>
+          <b class="grey">О себе</b>
         </div>
-        <div></div>
+      </div>
+      <div class="progress-bar">
+        <span style="width:10%"></span>
       </div>
     </div>
+    <div class="middle-part">
+      <div class="left__middle-part">
+        <div class="photo-loader">
+          <b>Аватар профиля</b>
+          <button class="button primary">Загрузить</button>
+          <small class="grey">Загрузите фотографию весом не более 10 мб</small>
+        </div>
+        <form action="">
+          <div class="form__left">
+            <div class="input-text-group">
+              <input type="input" class="input-field" placeholder="" name="fullname" id='fullname' required />
+              <label for="fullname" class="input-label">Имя и фамилия</label>
+            </div>
+            <div class="input-radio-group">
+              <div class="var__input-radio-group">
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male"><p>Парень</p></label>
+              </div>
+              <div class="var__input-radio-group">
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female"><p>Девушка</p></label>
+              </div>
+            </div>
+            <div class="input-date-group">
+              <input type="date" name="birthday" id="birthday" class="input-field">
+            </div>
+            <div class="input-text-group">
+              <input type="input" class="input-field" placeholder="" name="tg" id='tg' required />
+              <label for="tg" class="input-label">Телеграм</label>
+            </div>
+            <div class="input-text-group">
+              <input type="input" class="input-field" placeholder="" name="phone" id='phone' required />
+              <label for="phone" class="input-label">Номер телефона</label>
+            </div>
+            <div class="input-text-group about-me">
+              <input type="input" class="input-field" placeholder="" name="about-me" id='about-me' required />
+              <label for="about-me" class="input-label">О себе</label>
+            </div>
+            <small class="grey">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</small>
+          </div>
+        </form>
+      </div>
+      <div class="right__middle-part">
+        <div class="page-preview">
+          <small>Так будет выглядеть твоя будущая страница</small>
+          <div class="page__page-preview floating">
+            <div class="left__page">
+              <div class="img-preview">
+                <img src="" alt="" sizes="" srcset="">
+              </div>
+              <button class="button primary">Показать контакты</button>
+            </div>
+            <div class="right__page">
+              <h3>Саша Фефелов</h3>
+              <div class="basic-info__right">
+                <p>Парень</p>
+                <img src="/src/img/Ellipse.svg" alt="">
+                <p>21 год</p>
+                <img src="/src/img/Ellipse.svg" alt="">
+                <p></p>
+              </div>
+              <div class="show-in-search__right">
+                <p></p>
+              </div>
+              <div class="description__right">
+                <p>Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
+                <div class="expand__description">
+                  <p>Развернуть</p>
+                  <img src="/src/img/Rectangle 11.svg" alt="">
+                </div>
+              </div>
+              <div class="other-data__right">
+                <div class="preferences__other-data"><p></p></div>
+                <div class="price__other-data"><p></p></div>
+                <div class="metro__other-data"><p></p></div>
+                <div class="line__other-data"></div>
+                <div class="mini__other-data">
+                  <div class="habits__mini"><p></p></div>
+                  <div class="neighbor__mini"><p></p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stage__right">
+          <div class="text__stage">
+            <b>Мы совсем ничего про тебя не знаем</b>
+            <br>
+            <small>Расскажи о себе. <br>Люди пишут тем, кому доверяют. Тем более при поиске соседа</small>
+          </div>
+          <div class="smile__stage">
+            <p>🙁</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

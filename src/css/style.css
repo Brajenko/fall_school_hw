@@ -1,0 +1,418 @@
+
+  /* ШРИФТ */
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl.otf") format("opentype");
+  }
+  
+  h3 {
+    font-family: Museo Sans Cyrl;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+  }
+
+  b {
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+
+  small {
+    font-family: Museo Sans Cyrl;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .grey {
+    color: #CCCCCC;
+  }
+
+  /* ЭЛЕМЕНТЫ ФОРМЫ */
+  .input-text-group {
+    position: relative;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 16px 12px;
+    border-radius: 8px;
+    background: #F4F4F6;
+    border: 0;
+    outline: 0;
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+    
+  
+    &::placeholder {
+      color: transparent;
+    }
+    
+    /* Лейбл без текста и не в фокусе */
+    &:placeholder-shown ~ .input-label {
+      font-family: Museo Sans Cyrl;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      cursor: text;
+      top: 27%;
+      left: 4%;
+      color: #A1A6B1;
+    }
+  }
+  
+  /* Лейбл без фокуса сверху */
+  .input-label {
+    top: -17%;
+    left: 2%;
+    display: block;
+    transition: 0.2s;
+    color: #5D5B66;
+    font-family: Museo Sans Cyrl;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    position: absolute;
+  }
+  
+  /* Лейбл с фокусом сверху */
+  .input-field:focus {
+    ~ .input-label {
+      position: absolute;
+      top: -17%;
+      left: 2%;
+      display: block;
+      transition: 0.2s;
+      color: #5D5B66; 
+      font-family: Museo Sans Cyrl;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      text-align: left;
+      position: absolute;  
+    }
+  }
+
+  /* РАДИО (код спиздил) */
+
+  .input-radio-group input[type=radio] {
+    display: none;
+  }
+
+  .input-radio-group label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 150%;
+    user-select: none;
+  }
+  .input-radio-group label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 22px;
+    background: url(/src/img/radio-unchecked.svg) 0 0 no-repeat;
+  }
+   
+  /* Checked */
+  .input-radio-group input[type=radio]:checked + label:before {
+    background: url(/src/img/radio-checked.svg) 0 0 no-repeat;
+  }
+   
+  /* Hover */
+  .input-radio-group label:hover:before {
+    filter: brightness(120%);
+  }
+
+  /* БОРДЕРЫ */
+  .floating {
+    box-shadow: 0px 1.1335145235061646px 4.293615818023682px 0px #855E9807;
+    box-shadow: 0px 2.866743326187134px 10.85887622833252px 0px #855E980A;
+    box-shadow: 0px 5.8478875160217285px 22.15108871459961px 0px #855E980D;
+    box-shadow: 0px 5.8478875160217285px 22.15108871459961px 0px #855E980D;
+
+  }
+
+  .rounded {
+    border-radius: 8px;
+  }
+
+  /* Прогресс бар */
+  .progress-bar {
+    background-color: #F4F4F6;
+    width: 100%;
+    height: 2px;
+  }
+
+  .progress-bar > span {
+    display: block;
+    height: 100%;
+    background-color: #CDBDDB;
+  }
+
+  /* HEADER */
+  /* не знал, как сделать header во всю ширину))) */
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.header {
+    display: flex;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background: #FFF;
+    box-shadow: 0px 1.13351px 4.29362px 0px rgba(133, 94, 152, 0.03), 0px 2.86674px 10.85888px 0px rgba(133, 94, 152, 0.04), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05);    
+  }
+
+  .header-right {
+    float: right;
+  }
+
+  /* Основной контент */
+  .main {
+    gap: 40px;
+    align-self: center;
+    width: 70%;
+  }
+
+  /* Верхняя часть */
+  .upper-part {
+    align-self: left;
+  }
+
+  .upper-part__stage {
+    display: flex;
+  }
+
+  .more-info__stage {
+    align-self: center;
+    margin-left: 16px;
+    height: 100%;
+  }
+
+
+  .more-info__stage b {
+    margin-right: 16px;
+  }
+
+  /* Центральная часть */
+  .middle-part {
+    display: flex;
+    padding-top: 40px;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  .left__middle-part {
+    
+  }
+
+  .right__middle-part {
+  
+  }
+
+  .photo-loader {
+    border: 1px dashed #EBEBEB;
+    border-radius: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .photo-loader b {
+    margin-bottom: 16px;
+  }
+
+  .photo-loader small {
+    margin-top: 20px;
+  }
+
+  .page__page-preview {
+    padding: 20px;
+    display: flex;
+    gap: 28px;
+    border-radius: 32px;
+  }
+
+  .img-preview {
+    width: 140px;
+    height: 140px;
+    border: 1px dashed #D9D1E0;
+    border-radius: 16px;
+  }
+
+  .left__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* КНОПКИ */
+  .button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .button.primary {
+    background-color: #7953C3;
+    color: white;
+    border: 0px;
+  }
+
+  .button.secondary {
+    background-color: white;
+    color: #7953C3;
+    border: 2px solid #7953C3;
+  }
+
+  .page-preview h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+
+  .page-preview p {
+    font-family: Museo Sans Cyrl;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0em;
+  }
+
+  .basic-info__right {
+    display:flex;
+    gap: 4px;
+  }
+
+  .right__page p:empty {
+    background-color: #EEEEF1;
+    width: 120px;
+    height: 10px;
+    border-radius: 4px;
+  }
+
+  .description__right {
+    display: flex;
+    gap: 16px;
+  }
+
+  .expand__description {
+    display:flex;
+    gap: 4px;
+  }
+
+  .expand__description p {
+    color: #7953C3;
+  }
+
+  .other-data__right {
+    padding: 12px;
+    padding-right: 20px;
+    background-color: #F4F4F6;
+    border-radius: 8px;
+  }
+
+  .preferences__other-data {
+    margin-bottom: 4px;
+  }
+
+  .price__other-data {
+    margin-bottom: 2px;
+  }
+
+  .line__other-data {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background-color: #CCCCCC;
+  }
+
+  .mini__other-data {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 4px;
+    display: flex;
+    gap: 4px;
+  }
+
+  .stage__right {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .smile__stage p {
+    font-family: Museo Sans Cyrl;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+
+  .form__left {
+    margin-top: 40px;
+  }
+
+  .input-text-group {
+    margin-top: 24px;
+  }
+
+  .input-radio-group {
+    gap: 16px;
+    display: flex;
+  }
+
+  .var__input-radio-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
