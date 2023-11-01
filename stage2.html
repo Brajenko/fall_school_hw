@@ -40,10 +40,133 @@
                 <label for="teacher"><p>Сотрудник</p></label>
               </div>
             </div>
+            <div class="education__form">
+              <div class="inline-radio-group">
+                <small class="gray">Курс</small>
+                <div class="radio-inline">
+                  <input label="1" type="radio" id="course1" name="course" value="1">
+                  <input label="2" type="radio" id="course2" name="course" value="2">
+                  <input label="3" type="radio" id="course3" name="course" value="3">
+                  <input label="4" type="radio" id="course4" name="course" value="4">
+                  <input label="5" type="radio" id="course5" name="course" value="5">
+                  <input label="6" type="radio" id="course6" name="course" value="6">
+                </div>
+                <div class="custom-checkbox">
+                  <input type="checkbox" name="is-graduate" id="is-graduate">
+                  <label for="is-graduate"><p>Уже окончил вышку</p></label>
+                </div>
+              </div>
+              <div class="dropdown-container">
+                <small class="gray">Ступень образования</small>
+                <button class="dropdown" type="button">
+                    <div class="dropdown-text">Ступень образования</div>
+                    <img src="/src/img/arrow-down.svg" alt="" class="arrow arrow-down">
+                    <img src="/src/img/arrow-up.svg" alt="" class="arrow arrow-up hide">
+                    <div class="dropdown-part hide">
+                        <img src="/src/img/dropdown-part.svg" alt="">
+                    </div>
+                    <div class="dropdown-content hide">
+                        <a class="dropdown-elem">Бакалавриат</a>
+                        <a class="dropdown-elem">Магистратура</a>
+                        <a class="dropdown-elem">Аспирантура</a>
+                    </div>
+                </button>
+              </div>
+              <div class="dropdown-container">
+                <small class="gray">Факультет</small>
+                <button class="dropdown" type="button">
+                    <div class="dropdown-text">Факультет</div>
+                    <img src="/src/img/arrow-down.svg" alt="" class="arrow arrow-down">
+                    <img src="/src/img/arrow-up.svg" alt="" class="arrow arrow-up hide">
+                    <div class="dropdown-part hide">
+                        <img src="/src/img/dropdown-part.svg" alt="">
+                    </div>
+                    <div class="dropdown-content hide">
+                        <a class="dropdown-elem">Факультет математики</a>
+                        <a class="dropdown-elem">Факультет экономических наук</a>
+                        <a class="dropdown-elem">Московский институт электроники и математики им. А.Н. Тихонова</a>
+                        <a class="dropdown-elem">Факультет компьютерных наук</a>
+                        <a class="dropdown-elem">Высшая школа бизнеса</a>
+                        <a class="dropdown-elem">Факультет права</a>
+                        <a class="dropdown-elem">Высшая школа юриспруденции и администри­рования</a>
+                        <a class="dropdown-elem">Факультет гуманитарных наук</a>
+                        <a class="dropdown-elem">Факультет социальных наук</a>
+                        <a class="dropdown-elem">Факультет креативных индустрий</a>
+                        <a class="dropdown-elem">Факультет мировой экономики и мировой политики</a>
+                        <a class="dropdown-elem">Факультет физики</a>
+                        <a class="dropdown-elem">Международный институт экономики и финансов</a>
+                        <a class="dropdown-elem">Факультет городского и регионального развития</a>
+                        <a class="dropdown-elem">Факультет химии</a>
+                        <a class="dropdown-elem">Факультет биологии и биотехнологии</a>
+                        <a class="dropdown-elem">Факультет географии и гео­ин­фор­ма­ци­он­ных технологий</a>
+                        <a class="dropdown-elem">Школа иностранных языков</a>
+                        <a class="dropdown-elem">Институт статистических исследований и экономики знаний</a>
+                        <a class="dropdown-elem">Банковский институт</a>
+                        <a class="dropdown-elem">Школа инноватики и пред­при­ни­мательства</a>
+                    </div>
+                </button>
+              </div>
+            </div>
+            <div class="input-text-group">
+              <input type="input" class="input-field" placeholder="" name="job" id='job' required />
+              <label for="job" class="input-label">Работа</label>
+            </div>
           </div>
         </form>
       </div>
-      <div class="right__middle-part"></div>
+      <div class="right__middle-part">
+        <div class="page-preview">
+          <small>Так будет выглядеть твоя будущая страница</small>
+          <div class="page__page-preview floating">
+            <div class="left__page">
+              <div class="img-preview">
+                <img src="" alt="" sizes="" srcset="">
+              </div>
+              <button class="button primary">Показать контакты</button>
+            </div>
+            <div class="right__page">
+              <h3>Саша Фефелов</h3>
+              <div class="basic-info__right">
+                <p>Парень</p>
+                <img src="/src/img/Ellipse.svg" alt="">
+                <p>21 год</p>
+                <img src="/src/img/Ellipse.svg" alt="">
+                <p></p>
+              </div>
+              <div class="show-in-search__right">
+                <p></p>
+              </div>
+              <div class="description__right">
+                <p>Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
+                <div class="expand__description">
+                  <p>Развернуть</p>
+                  <img src="/src/img/arrow-down.svg" alt="">
+                </div>
+              </div>
+              <div class="other-data__right">
+                <div class="preferences__other-data"><p></p></div>
+                <div class="price__other-data"><p></p></div>
+                <div class="metro__other-data"><p></p></div>
+                <div class="line__other-data"></div>
+                <div class="mini__other-data">
+                  <div class="habits__mini"><p></p></div>
+                  <div class="neighbor__mini"><p></p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stage__right">
+          <div class="text__stage">
+            <b>Расскажи где ты учишься</b>
+            <br>
+            <small>Часто студенты ищут соседей по схожим интересам</small>
+          </div>
+          <div class="smile__stage">
+            <img src="src/img/happy-smile.svg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="lower-part">
         <button class="button primary">Продолжить</button>
@@ -82,4 +205,5 @@
     <div class="rectangle__footer"></div>
   </footer>
 </body>
+<script src="/js/script.js"></script>
 </html>

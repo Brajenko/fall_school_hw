@@ -3,30 +3,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Элемент дизайн</title>
 </head>
 <body>
-    <button class="button primary">Кнопка 1</button>
-    <button class="button secondary">Кнопка 2</button>
-    <h3>Заголовок 3</h3>
-    <b>Параграф болд</b>
-    <p>Параграф</p>
-    <p class="grey">Параграф грей</p>
-    <small>Смолл</small>
-    <small class="grey">Смолл грей</small>
-    <br>
-    <br>
-    <form action="">
-        <!-- <div class="input-text-group">
-            <input type="input" class="input-field" placeholder="" name="tg" id='tg' required />
-            <label for="tg" class="input-label">Телеграм</label>
-        </div> -->
-        <br>
-        <br>
-        <div class="input-text-group">
-            <label for="about-me" class="input-label">Телеграм</label>
-            <textarea class="input-field" name="about-me" id="about-me" cols="30" rows="10" placeholder="dfdfd" ></textarea>
+    <div class="input-date-group">
+        <p class="gray">Дата рождения</p>
+        <img src="/src/img/calendar.svg" class="calendar-img">
+    </div>
+    <div class="date-picker">
+        <div class="year-picker">
+            <div class="row__year-picker">
+                <p class="year-number">1981</p>
+                <p class="year-number">1982</p>
+                <p class="year-number">1983</p>
+                <p class="year-number">1984</p>
+            </div>
+            <div class="row__year-picker">
+                <p class="year-number">1985</p>
+                <p class="year-number">1986</p>
+                <p class="year-number">1987</p>
+                <p class="year-number">1988</p>
+            </div>
+            <div class="row__year-picker">
+                <p class="year-number">1989</p>
+                <p class="year-number">1990</p>
+                <p class="year-number">1991</p>
+                <p class="year-number">1992</p>
+            </div>
+            <div class="row__year-picker">
+                <p class="year-number">1993</p>
+                <p class="year-number">1994</p>
+                <p class="year-number">1995</p>
+                <p class="year-number">1996</p>
+            </div>
+            <div class="row__year-picker">
+                <p class="year-number">1997</p>
+                <p class="year-number">1998</p>
+                <p class="year-number">1999</p>
+                <p class="year-number">2000</p>
+            </div>
+            <div class="row__year-picker">
+                <p class="year-number">2001</p>
+                <p class="year-number">2002</p>
+                <p class="year-number">2003</p>
+                <p class="year-number">2004</p>
+            </div>
+            <div class="row__year-picker">
+                <p class="year-number">2005</p>
+                <p class="year-number">2006</p>
+                <p class="year-number">2007</p>
+                <p class="year-number">2008</p>
+            </div>
         </div>
+        <div class="month-picker">
+            
+        </div>
+    </div>
+    <form action="">
+        <input type="date" name="birthday" id="birthday" hidden>
     </form>
 </body>
+<script src="/js/script3.js"></script>
 </html>

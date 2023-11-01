@@ -1,75 +1,84 @@
-  /* ЭЛЕМЕНТЫ ФОРМЫ */
-  .input-text-group {
-    position: relative;
-  }
-  
-  .input-field {
-    /* width: 100%; */
-    padding: 16px 12px;
-    border-radius: 8px;
-    background: #F4F4F6;
-    border: 0;
-    outline: 0;
-    font-family: Museo Sans Cyrl;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #000;
-    
-  
-    &::placeholder {
-      color: transparent;
-    }
-    
-    /* Лейбл без текста и не в фокусе */
-    &:placeholder-shown ~ .input-label {
-      font-family: Museo Sans Cyrl;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
-      cursor: text;
-      top: 27%;
-      left: 4%;
-      color: #A1A6B1;
-    }
-  }
-  
-  /* Лейбл без фокуса сверху */
-  .input-label {
-    top: -17%;
-    left: 2%;
-    display: block;
-    transition: 0.2s;
-    color: #5D5B66;
-    font-family: Museo Sans Cyrl;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    position: absolute;
-  }
-  
-  /* Лейбл с фокусом сверху */
-  .input-field:focus {
-    ~ .input-label {
-      position: absolute;
-      top: -17%;
-      left: 2%;
-      display: block;
-      transition: 0.2s;
-      color: #5D5B66; 
-      font-family: Museo Sans Cyrl;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: -0.01em;
-      text-align: left;
-      position: absolute;  
-    }
-  }
+body {
+  background-color: #dfdfdf;
+}
 
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url("/src/fonts/MuseoSansCyrl500.ttf") format("opentype");
+  font-weight: 500;
+}
+
+p {
+  font-family: Museo Sans Cyrl;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.input-date-group {
+  background: #F4F4F6;
+  color: #A1A6B1;
+  width: 200px;
+  padding: 12px;
+  padding-right: 8px;
+  gap: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.input-date-group:hover {
+  color: #040013;
+}
+
+.input-date-group p {
+  margin: 0;
+}
+
+.calendar-img {
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.year-picker {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 280px;
+  max-height: 260px;
+  overflow: auto;
+}
+
+.row__year-picker {
+  display: flex;
+  gap: 4px
+}
+
+.year-number {
+  padding: 4px 14px;
+  margin: 12px 0px;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.year-number:hover {
+  background-color: #EEEEF1;
+}
+
+.year-picker::-webkit-scrollbar {
+  width: 4px;
+}
+
+.year-picker::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+.year-picker::-webkit-scrollbar-thumb {
+  background: #CDBDDB; 
+  border-radius: 4px;
+}

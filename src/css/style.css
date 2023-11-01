@@ -2,13 +2,66 @@
   /* ШРИФТ */
   @font-face {
     font-family: 'Museo Sans Cyrl';
-    src: url("/src/fonts/MuseoSansCyrl.otf") format("opentype");
+    src: url("/src/fonts/MuseoSansCyrl900Italic.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl900.otf") format("opentype");
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl700.otf") format("opentype");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl500Italic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl500.ttf") format("opentype");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl300Italic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl300.otf") format("opentype");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl100Italic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/src/fonts/MuseoSansCyrl100.otf") format("opentype");
+    font-weight: 100;
   }
   
   h2 {
     font-family: Museo Sans Cyrl;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 48px;
     letter-spacing: -0.02em;
     color: #7953C3;
@@ -17,37 +70,39 @@
   h3 {
     font-family: Museo Sans Cyrl;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 40px;
-    letter-spacing: -0.01em;
+    letter-spacing: 0%;
   }
 
   b {
     font-family: Museo Sans Cyrl;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 24px;
-    letter-spacing: -0.01em;
   }
 
   p {
     font-family: Museo Sans Cyrl;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
-    letter-spacing: 0em;
   }
 
   small {
     font-family: Museo Sans Cyrl;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
-    letter-spacing: -0.01em;
   }
 
   .gray {
     color: #CCCCCC;
+  }
+
+  .collapsed {
+    height: 1.2em;
+    overflow: hidden;
   }
 
   /* ЭЛЕМЕНТЫ ФОРМЫ */
@@ -64,12 +119,10 @@
     outline: 0;
     font-family: Museo Sans Cyrl;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-    color: #000;
-    
   
     &::placeholder {
       color: transparent;
@@ -77,51 +130,50 @@
     
     /* Лейбл без текста и не в фокусе */
     &:placeholder-shown ~ .input-label {
-      font-family: Museo Sans Cyrl;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
       text-align: left;
       cursor: text;
-      top: 27%;
-      left: 4%;
+      top: 25%;
+      left: 6%;
       color: #A1A6B1;
+      font-family: Museo Sans Cyrl;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0em;
     }
   }
   
   /* Лейбл без фокуса сверху */
   .input-label {
-    top: -17%;
-    left: 2%;
+    top: -20%;
+    left: 5%;
     display: block;
     transition: 0.2s;
     color: #5D5B66;
+    position: absolute;
     font-family: Museo Sans Cyrl;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 20px;
     letter-spacing: -0.01em;
-    text-align: left;
-    position: absolute;
   }
   
   /* Лейбл с фокусом сверху */
   .input-field:focus {
     ~ .input-label {
       position: absolute;
-      top: -17%;
-      left: 2%;
+      top: -20%;
+      left: 5%;
       display: block;
       transition: 0.2s;
-      color: #5D5B66; 
+      color: #5D5B66;
+      text-align: left;
+      position: absolute;
       font-family: Museo Sans Cyrl;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 20px;
       letter-spacing: -0.01em;
-      text-align: left;
-      position: absolute;  
     }
   }
 
@@ -174,6 +226,87 @@
     border-radius: 8px;
   }
 
+  /* ЕЩЕ ОДНО РАДИО ТОЛЬКО В ЛИНИЮ КВАДРАТИКИ ТАКИЕ */
+  .radio-inline {
+    background: #F4F4F6;
+    padding: 8px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .radio-inline input {
+    width: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px 14px;
+    background: #F4F4F6;
+    color: #bdbdbdbd;
+    transition: all 100ms linear;
+    color: #040013;
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+  
+  .radio-inline input:checked {
+    background-color: #7953C3;
+    color: #fff;
+  }
+
+  .radio-inline input:before {
+    content: attr(label);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Чекбокс */
+  input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+  input[type="checkbox"]+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  
+  input[type="checkbox"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  
+  input[type="checkbox"]:checked+label::before {
+    background-image: url("/src/img/checkbox-checked.svg");
+  }
+  
+  input[type="checkbox"]:checked+label:hover::before {
+    background-image: url("/src/img/checkbox-checked-focus.svg");
+  }
+  
+  input[type="checkbox"]:not(:checked)+label::before {
+    background-image: url("/src/img/checkbox-unchecked.svg");
+  }
+  
+  input[type="checkbox"]:not(:checked)+label:hover::before {
+    background-image: url("/src/img/checkbox-unchecked-focus.svg");
+  }  
+  
+
   /* Прогресс бар */
   .progress-bar {
     background-color: #F4F4F6;
@@ -185,6 +318,89 @@
     display: block;
     height: 100%;
     background-color: #CDBDDB;
+  }
+
+ /* Dropdowns!!! */
+  .dropdown-container {
+    width: 100%;
+  }
+
+  .dropdown {
+    padding: 16px;
+    background-color: #F4F4F6;
+    color: #A1A6B1;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: inherit;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    top: 100%;
+    right: 0%;
+    width: 100%;
+    max-height: 352px;
+    overflow: auto;
+    z-index: 1;
+    box-shadow: 0px 1.1335145235061646px 4.293615818023682px 0px #855E9807;
+    box-shadow: 0px 2.866743326187134px 10.85887622833252px 0px #855E980A;
+    box-shadow: 0px 5.8478875160217285px 22.15108871459961px 0px #855E980D;
+    box-shadow: 0px 5.8478875160217285px 22.15108871459961px 0px #855E980D;
+  }
+
+  .dropdown-content::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .dropdown-content::-webkit-scrollbar-track {
+    border-radius: 4px;
+  }
+  
+  .dropdown-content::-webkit-scrollbar-thumb {
+    background: #CDBDDB; 
+    border-radius: 4px;
+  }
+
+  .dropdown-elem {
+    text-align: left;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-elem:hover {
+    background-color: #F4F4F6;
+  }
+
+  .dropdown-elem.picked {
+    color: #7953C3;
+  }
+
+  .with-picked {
+    color: black;
+  }
+
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .dropdown-part {
+    position: absolute;
+    bottom: 0;
+    right: 7%;
   }
 
   /* HEADER */
@@ -326,7 +542,7 @@
   .page-preview p {
     font-family: Museo Sans Cyrl;
     font-size: 9px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 11px;
     letter-spacing: 0em;
   }
@@ -349,7 +565,8 @@
   }
 
   .expand__description {
-    display:flex;
+    display: none;
+    align-items: baseline;
     gap: 4px;
   }
 
@@ -399,16 +616,28 @@
   }
 
   .smile__stage p {
-    font-family: Museo Sans Cyrl;
+    /* font-family: Museo Sans Cyrl;
     font-size: 32px;
     font-weight: 600;
     line-height: 40px;
     letter-spacing: -0.01em;
-    text-align: center;
+    text-align: center; */
   }
 
   .form__left {
     margin-top: 40px;
+  }
+
+  .form__left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .education__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .input-text-group {
