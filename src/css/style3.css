@@ -15,7 +15,7 @@ p {
   line-height: 24px;
 }
 
-.input-date-group {
+.input-date {
   background: #F4F4F6;
   color: #A1A6B1;
   width: 200px;
@@ -30,12 +30,13 @@ p {
   cursor: pointer;
 }
 
-.input-date-group:hover {
+.input-date:hover {
   color: #040013;
 }
 
-.input-date-group p {
+.input-date p {
   margin: 0;
+  text-align: center;
 }
 
 .calendar-img {
@@ -44,7 +45,7 @@ p {
   border-radius: 4px;
 }
 
-.year-picker {
+.year-picker {  
   background-color: white;
   padding: 16px;
   border-radius: 8px;
@@ -81,4 +82,80 @@ p {
 .year-picker::-webkit-scrollbar-thumb {
   background: #CDBDDB; 
   border-radius: 4px;
+}
+
+.month-picker {
+  background-color: white;
+  width: fit-content;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.row__month-picker {
+  display: flex;
+  gap: 4px;
+
+}
+
+.month-name {
+  padding: 4px 14px;
+  margin: 8px 0px;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+}
+
+.month-name:hover {
+  background-color: #EEEEF1;
+}
+
+.year-switcher {
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.year-switcher img {
+  cursor: pointer;
+}
+
+.day-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background-color: white;
+  width: fit-content;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.row__day-picker {
+  display: flex;
+  gap: 4px;
+
+}
+
+.day-number {
+  margin: 0%;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.day-number:hover {
+  background-color: #EEEEF1
+}
+
+.month-switcher {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none
 }

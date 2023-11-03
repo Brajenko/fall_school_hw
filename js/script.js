@@ -72,6 +72,6 @@ aboutInput.addEventListener('blur', (ev) => {
 })
 
 expandBtn.addEventListener('click', (ev) => {
-    document.querySelector('#desflatpickr(".anotherSelector");cription-small').classList.toggle('collapsed')
+    document.querySelector('#description-small').classList.toggle('collapsed')
     expandBtn.querySelectorAll('.arrow').forEach(e => {e.classList.toggle('hide')});
 })
